@@ -1,0 +1,129 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-jury"
+version = "0.1.0"
+description = "A multi-model LLM evaluation framework with consensus-based aggregation for RAG, summarization, and agentic AI workflows"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Netraj Patil", email = "netrajpatil05@gmail.com"}
+]
+keywords = [
+    "llm",
+    "evaluation",
+    "rag",
+    "hallucination-detection",
+    "multi-model",
+    "jury",
+    "consensus"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+dependencies = [
+    "langchain-core>=0.1.0",
+    "langchain>=0.1.0",
+]
+
+[project.optional-dependencies]
+# LLM Provider Support
+openai = ["langchain-openai>=0.0.5"]
+anthropic = ["langchain-anthropic>=0.1.0"]
+google = ["langchain-google-genai>=0.0.5"]
+all-providers = [
+    "langchain-openai>=0.0.5",
+    "langchain-anthropic>=0.1.0",
+    "langchain-google-genai>=0.0.5"
+]
+
+# Development dependencies
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "isort>=5.12.0"
+]
+
+# Documentation
+docs = [
+    "sphinx>=6.0.0",
+    "sphinx-rtd-theme>=1.2.0"
+]
+
+# Full installation with all extras
+full = [
+    "langchain-openai>=0.0.5",
+    "langchain-anthropic>=0.1.0",
+    "langchain-google-genai>=0.0.5",
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "isort>=5.12.0",
+    "sphinx>=6.0.0",
+    "sphinx-rtd-theme>=1.2.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/netraj-patil/llm-jury"
+Repository = "https://github.com/netraj-patil/llm-jury"
+"Bug Tracker" = "https://github.com/netraj-patil/llm-jury/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["llm_jury*"]
+namespaces = false
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip_gitignore = true
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --cov=llm_jury --cov-report=term-missing"
