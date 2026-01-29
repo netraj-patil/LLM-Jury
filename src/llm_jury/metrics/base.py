@@ -61,9 +61,6 @@ class Metric(ABC):
     def normalize(self, score: float) -> float:
         """
         Normalizes a raw score into a unified [0, 1] range.
-        
-        This satisfies FR 2.2 (Scale Detection & Normalization), ensuring
-        that judges using different scales (1-5, 1-10) can be compared or aggregated.
 
         Formula: (x - min) / (max - min)
 

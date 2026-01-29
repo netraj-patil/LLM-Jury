@@ -3,6 +3,7 @@ Base Judge Interface.
 Defines the abstract contract for all judge implementations (LLM-based, Heuristic, or Custom).
 """
 
+from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import Any, Dict, Optional, TYPE_CHECKING
 
@@ -28,11 +29,11 @@ class Judge(ABC):
         self.name = name
 
     @abstractmethod
-    def evaluate_score(self, prompt: str, context: Any) -> "JudgeScore":
+    def evaluate_score(self, prompt: str, context: Any) -> JudgeScore:
         """
         Evaluates the provided prompt and context to produce a score.
 
-        As per the design notes, this method is responsible for:
+        this method is responsible for:
         1. Invoking the judgment logic (LLM API call or local function).
         2. Parsing the output (e.g., extracting JSON or Regex matches).
         3. Returning a structured JudgeScore object containing the score, 
