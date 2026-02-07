@@ -3,7 +3,7 @@ name: Deploy Docs
 on:
   push:
     branches:
-      - main  # Set this to your default branch name
+      - master  # Set this to your default branch name
 
 permissions:
   contents: read

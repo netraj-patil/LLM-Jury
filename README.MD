@@ -360,9 +360,10 @@ class CustomHeuristicJudge(Judge):
         )
 ```
 
-## 📖 Examples
+## 📖 Documentation & Examples
 
-Check out the `examples/` directory for complete use cases.
+- **Full Documentation**: [https://netraj-patil.github.io/LLM-Jury/](https://netraj-patil.github.io/LLM-Jury/)
+- **Examples Directory**: Check out the `examples/` folder for Jupyter notebooks and scripts.
 
 ## 🤝 Contributing
 
