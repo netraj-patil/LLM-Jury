@@ -1,0 +1,21 @@
+Case ID,Category,Metric,Score,Valid,Confidence,Word Count,Complexity
+case_001_return_policy,policy,Groundedness,5.0,True,1.0,31,54.44
+case_001_return_policy,policy,Hallucination,0.0,False,1.0,31,54.44
+case_002_shipping_time,shipping,Groundedness,1.0,False,1.0,23,70.1
+case_002_shipping_time,shipping,Hallucination,1.0,True,1.0,23,70.1
+case_003_pricing,pricing,Groundedness,4.0,True,0.6667,22,80.18
+case_003_pricing,pricing,Hallucination,0.0,False,1.0,22,80.18
+case_004_warranty,policy,Groundedness,1.0,False,1.0,22,30.32
+case_004_warranty,policy,Hallucination,1.0,True,1.0,22,30.32
+case_005_payment_methods,payment,Groundedness,4.0,True,0.6667,17,48.91
+case_005_payment_methods,payment,Hallucination,0.0,False,1.0,17,48.91
+case_006_customer_support,support,Groundedness,1.0,False,1.0,25,62.17
+case_006_customer_support,support,Hallucination,1.0,True,1.0,25,62.17
+case_007_api_limits,technical,Groundedness,5.0,True,1.0,26,79.85
+case_007_api_limits,technical,Hallucination,0.0,False,1.0,26,79.85
+case_008_data_privacy,privacy,Groundedness,4.0,True,0.6667,26,64.63
+case_008_data_privacy,privacy,Hallucination,0.0,False,1.0,26,64.63
+case_009_integration,technical,Groundedness,2.0,False,1.0,28,56.66
+case_009_integration,technical,Hallucination,1.0,True,0.6667,28,56.66
+case_010_mobile_app,technical,Groundedness,4.0,True,0.6667,18,42.6
+case_010_mobile_app,technical,Hallucination,0.0,False,1.0,18,42.6

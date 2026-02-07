@@ -2,6 +2,7 @@
 
 A powerful multi-model LLM evaluation framework with consensus-based aggregation for RAG, summarization, and agentic AI workflows.
 
+[![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-blue.svg)](https://netraj-patil.github.io/LLM-Jury/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -17,6 +18,12 @@ A powerful multi-model LLM evaluation framework with consensus-based aggregation
 - **LangChain Integration**: Works with any LangChain-compatible model
 
 ## 📦 Installation
+
+### Using pip
+
+```bash
+pip install llm-jury
+```
 
 ### From GitHub (Recommended for Development)
 
@@ -355,13 +362,7 @@ class CustomHeuristicJudge(Judge):
 
 ## 📖 Examples
 
-Check out the `examples/` directory for complete use cases:
-
-- **`summarization_examples.py`**: 5 comprehensive summarization scenarios
-- Custom metrics creation
-- All aggregation strategies
-- Batch processing
-- Hallucination detection
+Check out the `examples/` directory for complete use cases.
 
 ## 🤝 Contributing
 

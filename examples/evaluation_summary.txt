@@ -1,0 +1,18 @@
+
+RAG EVALUATION SUMMARY REPORT
+======================================================================
+
+Dataset: 10 test cases
+Metrics: 2 (Groundedness, Hallucination)
+Judges: 3
+
+OVERALL QUALITY: 1.75/5
+
+VALIDITY RATE: 50.0%
+
+FLAGGED FOR REVIEW: 14 evaluations
+
+TOP PERFORMING CATEGORY: payment (2.00)
+NEEDS IMPROVEMENT: support (1.00)
+
+======================================================================
